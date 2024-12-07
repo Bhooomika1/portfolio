@@ -95,17 +95,19 @@ body {
     }
 }
 
-section{
+section {
     min-height: 100vh;
-    padding: 10rem 12% 10 rem;
+    padding: 10rem 12% 10rem;
 }
-.home{
+
+.home {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15rem;
 }
-.home-content{
+
+.home-content {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -113,47 +115,56 @@ section{
     justify-content: center;
     margin-top: 3rem;
 }
-span{
+
+span {
     color: var(--main-color);
 }
-.logo span{
+
+.logo span {
     color: var(--main-color);
 }
-.home-content h3{
+
+.home-content h3 {
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size: 3.5rem;
 }
-.home-content h1{
+
+.home-content h1 {
     font-size: 7rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
 }
+
 .home-img {
     border-radius: 40%;
 }
-.home-img img{
+
+.home-img img {
     position: relative;
-    top: 3 rem;
+    top: 3rem;
     width: 20vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
-    transition: 0.4s ease-in-out
+    transition: 0.4s ease-in-out;
 }
-.home-img img:hover{
-    box-shadow: 0 0 25PX var(--main-color),
+
+.home-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
-                0 0 100px var(--main-color),
+                0 0 100px var(--main-color);
 }
-.home-content p{
+
+.home-content p {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
 }
-.social-icons a{
+
+.social-icons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -167,23 +178,221 @@ span{
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease-in-out;
 }
-.social-icons a:hover{
+
+.social-icons a:hover {
     color: var(--text-color);
-    transform: scale(1.3)translateY(-5px);
+    transform: scale(1.3) translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
 }
-.btn{
+
+.btn {
     display: inline-block;
-    padding: 1rem2.8rem;
+    padding: 1rem 2.8rem;
     background: var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color:black;
+    color: black;
     border: 2px solid transparent;
     letter-spacing: 0.1rem;
     font-weight: 600;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn-group a:nth-of-type(2) {
+    background-color: black;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(2):hover {
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+}
+
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation span {
+    position: relative;
+}
+
+.text-animation span::before {
+    content: "";
+    color: var(--main-color);
+    animation: words 30s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--main-color);
+    right: -8px;
+    animation: typing 30s steps(20) infinite;
+}
+
+@keyframes words {
+    0%, 16.66% {
+        content: "Frontend Designer";
+    }
+    20%, 36.66% {
+        content: "Web Designer";
+    }
+    40%, 56.66% {
+        content: "UI UX Designer";
+    }
+    60%, 76.66% {
+        content: "Web Developer";
+    }
+    80%, 96.66% {
+        content: "Software Tester";
+    }
+}
+
+@keyframes typing {
+    0%, 13.33%, 20%, 33.33%, 40%, 53.33%, 60%, 73.33%, 80%, 93.33% {
+        width: 0;
+    }
+    3.33%, 16.66%, 23.33%, 36.66%, 43.33%, 56.66%, 63.33%, 76.66%, 83.33%, 96.66% {
+        width: calc(100% + 8px);
+    }
+    16.67%, 36.67%, 56.67%, 76.67%, 96.67% {
+        width: 0;
+    }
+}
+
+
+
+.heading {
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.education {
+    padding: 100px 15px;
+    background: var(--second-bg-color);
+}
+
+.education h2 {
+    margin-bottom: 5rem;
+}
+
+/* Timeline Section Styling */
+/* Container for the timeline */
+/* Container for the timeline */
+.timeline-items {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-items::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: pink;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px pink,
+                0 0 20px pink;
+    z-index: 1;
+}
+
+.timeline-item {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-dot {
+    height: 20px; /* Size of the dot */
+    width: 20px; /* Size of the dot */
+    background-color: var(--main-color); /* Main color for the dot */
+    box-shadow: 0 0 15px var(--main-color), 0 0 25px var(--main-color); /* Glowing effect */
+    position: absolute;
+    left: 50%; /* Aligns the dot to the vertical center */
+    transform: translateX(-50%); /* Centers the dot horizontally */
+    top: 0; /* Positions the dot correctly relative to the timeline */
+    border-radius: 50%; /* Makes the dot circular */
+    z-index: 2; /* Ensures the dot appears above other elements */
+     /* Optional: adds a border for contrast */
+}
+
+.timeline-content {
+    width: calc(50% - 50px);
+    padding: 20px;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(54, 184, 184, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(14, 217, 180, 0.2);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+    text-align: left;
+}
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: auto;
+    text-align: right;
+}
+
+.timeline-date {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: #6296da;
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    .timeline-items::before {
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: 0;
+        text-align: left;
+    }
+    .timeline-content {
+        width: calc(100% - 30px);
+        margin-left: 30px;
+    }
+    .timeline-dot {
+        left: 0;
+    }
+}
+
