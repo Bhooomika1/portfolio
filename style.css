@@ -307,10 +307,10 @@ span {
     position: absolute;
     width: 2px;
     height: 100%;
-    background-color: pink;
+    background-color: rgb(64, 241, 233);
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 10px pink,
+    box-shadow: 0 0 10px rgb(51, 255, 235),
                 0 0 20px pink;
     z-index: 1;
 }
